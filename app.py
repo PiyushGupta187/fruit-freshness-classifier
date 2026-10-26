@@ -1,7 +1,7 @@
 import tensorflow as tf
 import gradio as gr
 
-model = tf.keras.models.load_model(r"D:\fruits\fruit_model.keras")
+model = tf.keras.models.load_model("fruits\fruit_model.keras")
 
 class_names = ['freshapples', 'freshbanana', 'freshoranges',
                'rottenapples', 'rottenbanana', 'rottenoranges']
@@ -15,4 +15,4 @@ def predict(img):
 gr.Interface(fn=predict,
              inputs=gr.Image(),
              outputs=gr.Label(num_top_classes=3),
-             title="Fruit Freshness Classifier").launch(share=True)
+             title="Fruit Freshness Classifier").launch()
