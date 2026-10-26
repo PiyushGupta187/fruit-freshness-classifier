@@ -1,0 +1,6 @@
+tfenv/
+archive/
+archive.zip
+__pycache__/
+.ipynb_checkpoints/
+.gradio/
